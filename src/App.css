@@ -8,41 +8,79 @@
   flex-direction: column;
   row-gap: 20px;
   align-items: center;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .form input {
   width: 500px;
   height: 50px;
-  text-indent: 10px;
+  text-indent: 50px;
   outline: 0;
-  border-width: 0 0 2px;
-  border-color: green;
+  border: 1px solid grey;
+  background-color: transparent;
   margin-top: 50px;
 }
 
-.form input:focus {
-  border-color: yellowgreen;
+.inputIcon i {
+  margin-right: -30px;
+  color: yellowgreen;
 }
 
 .form button {
   margin-top: 30px;
-  width: 200px;
-  height: 30px;
+  width: 250px;
+  height: 40px;
   border: none;
   border-radius: 5px;
+  background-color: green;
+  color: #ffffff;
+  align-items: center;
+}
+
+h1 {
+  color: green;
+  font-size: 3rem;
+}
+
+.link {
+  color: green;
+  text-decoration: none;
+}
+
+p {
+  color: grey;
 }
 
 .login--button {
   background-color: green;
-  border: 1px solid green;
   color: #ffffff;
+  align-items: center;
 }
 
-.form--buttons {
+.homeDisplay{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   column-gap: 20px;
+}
+
+.fa-search {
+  border: 1px solid #000000;
+  border-right: none;
+  height: 28px;
+  width: 20px;
+  font-size: 20px;
+  text-indent: 10px;
+  padding-top: 5px;
+}
+
+.searchBar input {
+  width: 200px;
+  height: 35px;
+  text-indent: 50px;
+  background-color: transparent;
+  border: 1px solid #000000;
+  border-left: none;
+  outline: none;
 }
 
 .register--button {
@@ -60,20 +98,21 @@
   justify-content: center;
 }
 
-.logoutButton{
- float: right;
- margin-bottom: 20px;
- width: 200px;
-}
-
-h1 {
-  color: #27374D;
-  font-size: 3rem;
+.logoutButton {
+  float: right;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 30px;
+  background-color: green;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
 }
 
 .todo-form {
   display: flex;
   flex-direction: column;
+  text-align: center;
   row-gap: 30px;
 }
 
@@ -83,6 +122,14 @@ h1 {
   text-indent: 5px;
   border: 1px solid grey;
   border-radius: 5px;
+  outline: none;
+}
+
+textarea{
+  width: 500px;
+  height: 50px;
+  text-indent: 10px;
+  outline: none;
 }
 
 .todo-form select {
@@ -94,8 +141,8 @@ h1 {
 }
 
 .todo-form button {
-  width: 300px;
-  height: 30px;
+  width: 250px;
+  height: 40px;
   border-radius: 5px;
   background-color: green;
   color: white;
@@ -113,17 +160,17 @@ h1 {
   margin: 20px 0px 20px 10px;
 }
 
-.fa-search{
-border: 1px solid #000000;
-border-right: none;
-height: 28px;
-width: 20px;
-font-size: 20px;
-text-indent: 10px;
-padding-top: 5px;
+.fa-search {
+  border: 1px solid #000000;
+  border-right: none;
+  height: 28px;
+  width: 20px;
+  font-size: 20px;
+  text-indent: 10px;
+  padding-top: 5px;
 }
 
-.searchBar input{
+.searchBar input {
   width: 200px;
   height: 35px;
   text-indent: 50px;
@@ -133,7 +180,7 @@ padding-top: 5px;
   outline: none;
 }
 
-.searchBar input:after{
+.searchBar input:after {
   border-left: none;
 }
 
@@ -159,7 +206,7 @@ padding-top: 5px;
   top: 20px;
   width: 100px;
   height: 20px;
-  background-color: #8EAC50;
+  background-color: #8eac50;
   border: none;
   border-radius: 5px;
 }
@@ -182,8 +229,6 @@ th {
   padding: 8px;
 }
 
-
-
 .actions .fa {
   margin-left: 50px;
 }
@@ -192,10 +237,20 @@ th {
   font-size: 2vw;
 }
 
-.fa-trash-o{
+.fa-trash-o {
   color: red;
 }
 
-.fa-pencil-square-o{
+.fa-pencil-square-o {
   color: green;
+}
+
+
+@media screen and (max-width:767px) {
+  table {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+  }
 }

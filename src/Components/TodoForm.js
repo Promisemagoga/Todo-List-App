@@ -23,7 +23,7 @@ const[todoPriority, setTodoPriority] = useState("")
           placeholder="Enter Todo"
           onChange={(event) => setTodoItem(event.target.value)}
         />
-         <input
+         <textarea
           type="text"
           placeholder="Enter description"
           onChange={(event) => setTodoDescription(event.target.value)}

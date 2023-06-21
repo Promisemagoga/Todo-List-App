@@ -36,7 +36,7 @@ function App() {
   <Routes>
     <Route path="/" element={!isAuthenticated ?<Login setIsAuthenticated={setIsAuthenticated}/>: <Navigate to="/Home"/>}></Route>
     <Route path="/Register"element={<Register />}></Route>
-    <Route path="/Home" element={isAuthenticated ? <div><LogoutButton  setIsAuthenticated={setIsAuthenticated}/> <TodoForm AddTodoItems={AddTodoItems} /><DisplayTodo todoList={todoList} /></div> : <Navigate to={"/"}/>}></Route>
+    <Route path="/Home" element={isAuthenticated ? <div className="homeDisplay"><LogoutButton  setIsAuthenticated={setIsAuthenticated}/> <TodoForm AddTodoItems={AddTodoItems} /><DisplayTodo todoList={todoList} /></div> : <Navigate to={"/"}/>}></Route>
   </Routes>
 </Router>
   );
