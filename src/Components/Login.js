@@ -15,6 +15,9 @@ function Login({ setIsAuthenticated }) {
     for (let i = 0; i < users.length; i++) {
       if (email === users[i].userEmail && password === users[i].userPassword) {
         setIsAuthenticated(true);
+        localStorage.setItem("user", JSON.stringify(users[i]))
+        localStorage.setItem("signedIn", JSON.stringify(true))
+        
       }
     }
   }

@@ -13,6 +13,7 @@ const[todoPriority, setTodoPriority] = useState("")
     )
     window.location.reload()
   }
+
   return (
     <div>
       <h1>Todo-List</h1>

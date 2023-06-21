@@ -26,8 +26,9 @@ function DisplayTodo(props) {
       if (searchTask === results[i].todoPriority) {
         localStorage.setItem("searchBar", JSON.stringify([results[i]]));
       }
+      console.log(searchTask);
     }
-    console.log(searchTask);
+   
   }
   return (
     <div>

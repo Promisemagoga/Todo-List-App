@@ -60,6 +60,12 @@
   justify-content: center;
 }
 
+.logoutButton{
+ float: right;
+ margin-bottom: 20px;
+ width: 200px;
+}
+
 h1 {
   color: #27374D;
   font-size: 3rem;
@@ -124,6 +130,7 @@ padding-top: 5px;
   background-color: transparent;
   border: 1px solid #000000;
   border-left: none;
+  outline: none;
 }
 
 .searchBar input:after{

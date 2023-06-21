@@ -5,10 +5,13 @@ import TodoForm from "./Components/TodoForm";
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes,Route, Navigate } from "react-router-dom";
 import Register from "./Components/Register";
+import LogoutButton from "./Components/LogoutButton";
 
 function App() {
   const getTodo = JSON.parse(localStorage.getItem("todoList")) || [];
   const [todoList, setTodoList] = useState(getTodo);
+
+  const signedIn = JSON.parse(localStorage.getItem("signedIn")) || false;
 
   useEffect(() => {
     localStorage.setItem("todoList", JSON.stringify(todoList));
@@ -26,13 +29,14 @@ function App() {
   };
 
 
-  const[isAuthenticated, setIsAuthenticated] = useState(false);
+  const[isAuthenticated, setIsAuthenticated] = useState(signedIn);
+
   return (
 <Router>
   <Routes>
     <Route path="/" element={!isAuthenticated ?<Login setIsAuthenticated={setIsAuthenticated}/>: <Navigate to="/Home"/>}></Route>
     <Route path="/Register"element={<Register />}></Route>
-    <Route path="/Home" element={<div><TodoForm AddTodoItems={AddTodoItems} /><DisplayTodo todoList={todoList} /></div>}></Route>
+    <Route path="/Home" element={isAuthenticated ? <div><LogoutButton  setIsAuthenticated={setIsAuthenticated}/> <TodoForm AddTodoItems={AddTodoItems} /><DisplayTodo todoList={todoList} /></div> : <Navigate to={"/"}/>}></Route>
   </Routes>
 </Router>
   );
