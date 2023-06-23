@@ -1,5 +1,6 @@
 import { useState } from "react";
 import UpdateTodo from "./UpdateTodo";
+import SearchResult from "./SearchResult";
 
 function DisplayTodo(props) {
   const deletTodo = localStorage.getItem("todoList");
@@ -26,7 +27,6 @@ function DisplayTodo(props) {
       if (searchTask === results[i].todoPriority) {
         localStorage.setItem("searchBar", JSON.stringify([results[i]]));
       }
-      console.log(searchTask);
     }
    
   }
@@ -34,7 +34,7 @@ function DisplayTodo(props) {
     <div>
       <div className="displayContainer">
         <div className="tableBar">
-          <button></button>
+          <button className="display"></button>
           <div className="title">
             <i className="fa fa-calendar" aria-hidden="true"></i>
             <h2>Task List</h2>
@@ -76,9 +76,10 @@ function DisplayTodo(props) {
               </tr>
             ))}
           </tbody>
-          {showForm && <UpdateTodo />}
         </table>
+        {showForm && <UpdateTodo />}
       </div>
+         <SearchResult/>
     </div>
   );
 }
