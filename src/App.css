@@ -306,6 +306,7 @@ th {
   .display {
     position: relative;
     left: 115px;
+    width: 50px;
   }
 
   .search {
