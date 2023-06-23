@@ -1,8 +1,9 @@
 import { useState } from "react";
 import UpdateTodo from "./UpdateTodo";
-import SearchResult from "./SearchResult";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function DisplayTodo(props) {
+  const navigate = useNavigate()
   const deletTodo = localStorage.getItem("todoList");
   const Delete = JSON.parse(deletTodo);
 
@@ -28,7 +29,7 @@ function DisplayTodo(props) {
         localStorage.setItem("searchBar", JSON.stringify([results[i]]));
       }
     }
-   
+  navigate("/search")
   }
   return (
     <div>
@@ -79,7 +80,6 @@ function DisplayTodo(props) {
         </table>
         {showForm && <UpdateTodo />}
       </div>
-         <SearchResult/>
     </div>
   );
 }

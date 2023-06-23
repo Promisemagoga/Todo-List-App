@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import Register from "./Components/Register";
 import LogoutButton from "./Components/LogoutButton";
+import SearchResult from "./Components/SearchResult";
 
 
 function App() {
@@ -64,6 +65,7 @@ function App() {
             )
           }
         ></Route>
+        <Route path="/search" element={<SearchResult/>}></Route>
       </Routes>
     </Router>
   );

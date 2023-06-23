@@ -34,7 +34,6 @@
   border-radius: 5px;
   background-color: green;
   color: #ffffff;
- 
 }
 
 h1 {
@@ -57,7 +56,7 @@ p {
   align-items: center;
 }
 
-.homeDisplay{
+.homeDisplay {
   display: flex;
   flex-direction: column;
   column-gap: 20px;
@@ -125,7 +124,7 @@ p {
   outline: none;
 }
 
-textarea{
+textarea {
   width: 500px;
   height: 50px;
   text-indent: 10px;
@@ -155,7 +154,6 @@ textarea{
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  
 }
 .searchBar {
   display: flex;
@@ -248,45 +246,42 @@ th {
   color: green;
 }
 
-.search{
-display: flex;
-width: 400px;
-margin-left: auto;
-margin-right: auto;
-column-gap: 50px;
-margin-top: 30px;
-background-color: #8EAC50;
-padding: 20px;
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.search {
+  display: flex;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  column-gap: 50px;
+  margin-top: 30px;
+  background-color: #8eac50;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.search p{
+.search p {
   color: #ffffff;
 }
 
-
-@media screen and (max-width:767px) {
-  h1{
-font-size: 2rem;
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
   }
   .form input {
     width: 300px;
-   
   }
 
   .form button {
     width: 200px;
-   
   }
 
   .todo-form input {
     width: 300px;
   }
 
-  textarea{
+  textarea {
     width: 300px;
   }
-  
+
   .todo-form select {
     width: 310px;
     height: 50px;
@@ -294,23 +289,27 @@ font-size: 2rem;
 
   .logoutButton {
     width: 100px;
-  
   }
 
   .displayContainer {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-
   }
 
-  .searchBar{
+  .searchBar {
     width: 200px;
-    }
+  }
 
-    .display{
-      position: relative;
-      left: 115px;
-    }
-    
+  .display {
+    position: relative;
+    left: 115px;
+  }
+
+  .search {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    width: 250px;
+  }
 }
