@@ -230,6 +230,8 @@ th {
   padding: 8px;
 }
 
+
+
 .actions .fa {
   margin-left: 50px;
 }
@@ -311,5 +313,14 @@ th {
     flex-direction: column;
     row-gap: 30px;
     width: 250px;
+  }
+
+  .actions .fa {
+    margin-left: 30px;
+    font-size: 5vw;
+  }
+
+  .actions .fa-trash-o {
+    margin-bottom: 10px;
   }
 }
